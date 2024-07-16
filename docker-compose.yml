@@ -12,12 +12,14 @@ services:
       #- "5900:5900"
       - "2222:22"
       - "6080:6080"
+      - "33890:3389"
     entrypoint: /bin/bash -c /root/start.sh
     networks:
       network_a:
         ipv4_address: 192.168.10.2
     cap_add:
       - NET_ADMIN
+
 
   # JERRY-PC
   jerry_pc:

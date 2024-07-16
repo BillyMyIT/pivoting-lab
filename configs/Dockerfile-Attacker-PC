@@ -9,13 +9,14 @@ RUN apt-get update && \
     xfce4 \
     xfce4-goodies \
     dbus-x11 \
-    x11vnc \
+    #x11vnc \
     xvfb \
     xinit \
     xorg \
     sudo \
-    novnc && \
-    rm -rf /var/lib/apt/lists/*
+    ##novnc
+    xrdp && \
+    rm -rf /var/lib/apt/lists/* 
 
 # Actualiza el sistema e instala herramientas básicas
 RUN apt-get update && \
